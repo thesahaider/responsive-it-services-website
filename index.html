@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="IT, AI, cloud, DevOps, and automation services for modern businesses.">
+    <title>TechNova | IT & AI Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="#home" class="logo">TechNova</a>
+
+            <button class="menu-toggle" id="menu-toggle"
+                    aria-label="Toggle navigation"
+                    aria-expanded="false">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="eyebrow">TECHNOLOGY FOR THE FUTURE</p>
+                <h1>Build Smarter with IT & AI Solutions</h1>
+                <p>
+                    We help businesses embrace cloud computing,
+                    automation, artificial intelligence, and modern
+                    technology.
+                </p>
+                <a href="#services" class="btn">Explore Our Services</a>
+            </div>
+        </section>
+
+        <section class="services section" id="services">
+            <div class="section-heading">
+                <p class="eyebrow">WHAT WE DO</p>
+                <h2>Our Services</h2>
+                <p>Practical technology solutions for growing businesses.</p>
+            </div>
+
+            <div class="service-grid">
+                <article class="service-card">
+                    <h3>Artificial Intelligence</h3>
+                    <p>AI assistants and intelligent business solutions.</p>
+                </article>
+
+                <article class="service-card">
+                    <h3>Cloud Computing</h3>
+                    <p>Cloud infrastructure and deployment solutions.</p>
+                </article>
+
+                <article class="service-card">
+                    <h3>DevOps & Automation</h3>
+                    <p>Automated workflows and modern delivery practices.</p>
+                </article>
+
+                <article class="service-card">
+                    <h3>Web Development</h3>
+                    <p>Responsive websites and digital experiences.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="about section" id="about">
+            <div class="section-heading">
+                <p class="eyebrow">ABOUT US</p>
+                <h2>Technology That Moves You Forward</h2>
+                <p>
+                    TechNova is a demonstration IT services brand focused
+                    on making modern technology easier to understand and use.
+                    We explore practical solutions in AI, cloud computing,
+                    automation, and web development.
+                </p>
+            </div>
+        </section>
+
+        <section class="contact section" id="contact">
+            <div class="section-heading">
+                <p class="eyebrow">GET IN TOUCH</p>
+                <h2>Let's Discuss Your Project</h2>
+                <p>Complete the form to test our contact interface.</p>
+            </div>
+
+            <form id="contact-form">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name"
+                       placeholder="Enter your name" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email"
+                       placeholder="Enter your email" required>
+
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="5"
+                          placeholder="Tell us about your project"
+                          required></textarea>
+
+                <button type="submit" class="btn">Send Message</button>
+                <p id="form-status" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> TechNova. Educational project.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

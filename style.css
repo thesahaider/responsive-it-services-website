@@ -1,0 +1,295 @@
+
+/* General settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #1e293b;
+    background: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Navigation */
+header {
+    background: #0f172a;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1150px;
+    margin: auto;
+    padding: 18px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #38bdf8;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: #f8fafc;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+.menu-toggle {
+    display: none;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* Hero section */
+.hero {
+    min-height: 520px;
+    padding: 100px 24px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(120deg, #0f172a, #1d4ed8);
+    color: white;
+}
+
+.hero-content {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.eyebrow {
+    color: #0284c7;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.hero .eyebrow {
+    color: #7dd3fc;
+}
+
+.hero h1 {
+    font-size: clamp(2.3rem, 5vw, 4rem);
+    line-height: 1.15;
+    margin-bottom: 22px;
+}
+
+.hero-content > p:not(.eyebrow) {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: #e2e8f0;
+    font-size: 1.1rem;
+}
+
+.btn {
+    display: inline-block;
+    background: #0284c7;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 13px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background: #0369a1;
+    transform: translateY(-2px);
+}
+
+/* General sections */
+.section {
+    padding: 80px 24px;
+}
+
+.section-heading {
+    max-width: 750px;
+    margin: 0 auto 42px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: #0f172a;
+}
+
+.section-heading > p:last-child {
+    color: #64748b;
+}
+
+/* Service cards */
+.services {
+    background: #f8fafc;
+}
+
+.service-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.service-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 5px 18px rgba(15, 23, 42, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(15, 23, 42, 0.1);
+}
+
+.service-card h3 {
+    color: #0369a1;
+    margin-bottom: 12px;
+    font-size: 1.25rem;
+}
+
+.service-card p {
+    color: #64748b;
+}
+
+/* About section */
+.about {
+    background: white;
+}
+
+/* Contact form */
+.contact {
+    background: #f1f5f9;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#contact-form label {
+    font-weight: bold;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font: inherit;
+    background: white;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    outline: 2px solid #38bdf8;
+    border-color: #0284c7;
+}
+
+#contact-form textarea {
+    resize: vertical;
+}
+
+#contact-form .btn {
+    align-self: flex-start;
+    margin-top: 8px;
+}
+
+#form-status {
+    color: #047857;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 24px;
+    background: #0f172a;
+    color: #cbd5e1;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 650px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        padding-top: 12px;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 12px 0;
+    }
+
+    .hero {
+        min-height: 430px;
+        padding: 75px 20px;
+    }
+
+    .section {
+        padding: 60px 20px;
+    }
+
+    .section-heading h2 {
+        font-size: 1.8rem;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #contact-form .btn {
+        width: 100%;
+    }
+}
